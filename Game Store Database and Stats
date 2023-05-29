@@ -1,0 +1,20 @@
+#1. Create a game store database
+
+CREATE TABLE games(
+    id INTEGER PRIMARY KEY,
+    name TEXT,
+    quantity INTEGER,
+    price INTEGER,
+    rating INTEGER
+);
+
+INSERT INTO games VALUES(1,"GTA 5", 5, 52, 5);
+INSERT INTO games VALUES(2,"GTA 4", 7, 20, 7);
+INSERT INTO games VALUES(3,"GTA 3", 2, 10, 1);
+
+#2. Display the database ordered by price
+SELECT * FROM games 
+ORDER BY price;
+
+#3. What is total amount of items present in store?
+SELECT SUM(quantity) FROM games;
