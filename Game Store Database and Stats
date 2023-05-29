@@ -1,5 +1,4 @@
 #1. Create a game store database
-
 CREATE TABLE games(
     id INTEGER PRIMARY KEY,
     name TEXT,
@@ -18,3 +17,7 @@ ORDER BY price;
 
 #3. What is total amount of items present in store?
 SELECT SUM(quantity) FROM games;
+
+#4. What are the top rated games in the store?
+SELECT name, quantity, price FROM games
+ORDER BY RATING DESC
