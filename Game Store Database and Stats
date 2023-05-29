@@ -20,4 +20,4 @@ SELECT SUM(quantity) FROM games;
 
 #4. What are the top rated games in the store?
 SELECT name, quantity, price FROM games
-ORDER BY RATING DESC
+ORDER BY RATING DESC;
