@@ -60,4 +60,21 @@ VALUES
     ('Company KK', 'Healthcare', 150.2, 3400, 0, 16, 8, 5.3);
 
 
+# Analysis: 
+
+# Get data about companies with health care benefits and have more than 20 days time off
+SELECT *
+FROM fortune_companies
+WHERE healthcare_benefits = 1 AND paid_time_off_days > 20 ;
+
+# Get data about companies related to technology, retail and healthcare
+SELECT * 
+FROM fortune_companies
+WHERE industry IN ("Technology, Retail, Healthcare");
+
+# Get total number of employee in each industry in descending order
+SELECT industry, SUM(employees) AS industry_total_employees
+FROM fortune_companies
+GROUP BY industry
+ORDER BY industry_total_employees DESC
 
